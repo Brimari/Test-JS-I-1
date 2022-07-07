@@ -130,7 +130,7 @@ function fizzBuzz(numero) {
     return "fizz";
   } else if (numero%5 == 0){
     return "buzz";
-  } else if (numero%3 == 0 && numero%5 == 0 ){
+  } else if ((numero%3 == 0) && (numero%5 == 0 )){
     return "fizzbuzz";
   } else {
     return (numero);
@@ -170,11 +170,11 @@ function esVerdadero(valor) {
 
 function tieneTresDigitos(numero) {
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
-  //Escribe tu código aquí    NO ME SALIO
-  if (num.toString().length ===3){
+  //Escribe tu código aquí    
+  if (numero >=100 && numero <=999){
     return true;
-  } else {
-    return false
+  }else{
+    return false;
   }
 }
 
@@ -186,8 +186,13 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
-
+if (numero== 0 || numero ==1 || numero ==4) return false;
+for(let x = 2; x < numero /2; x++) {
+  if (numero % x == 0) return false;
 }
+return true;
+}
+
 
 function tablaDelSeis() {
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).

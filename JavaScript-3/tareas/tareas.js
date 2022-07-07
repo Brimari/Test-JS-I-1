@@ -27,6 +27,11 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var nuevoArray = [];
+  for(var i = 0; i < array.length; i++) {
+  nuevoArray[i] = array[i] + 1;
+  }
+  return nuevoArray;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -109,13 +114,13 @@ return max
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 19.
   //Escribe tu código aquí
-  let cont = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > 10) { // Aquí es mayor a 10, no mayor o igual
-      cont.push(array[i]);
-    }
+  let contador = 0;
+  for (let i = 0; i < arreglo.length ; i++) {
+  if(arreglo[i] > 19){
+  contador++
   }
-  return cont;
+  }
+  return contador
 }
 
 
@@ -156,7 +161,12 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-
+  for (var i =0 ; i < arreglo.length - 1; i++) {
+    if(arreglo[i] !== arreglo[i+1]){
+    return false
+    }
+    }
+    return true
 } 
 
 function mesesDelAño(array) {
@@ -164,6 +174,18 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  var nuevoArray = [];
+  for(let i= 0; i<array.length; i++) {
+  if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre") {
+  nuevoArray.push(array[i]);
+  }
+  }
+  if(nuevoArray.length < 3) {
+  return "No se encontraron los meses pedidos";
+  }
+  else {
+  return nuevoArray;
+  }
 }
 
 
